@@ -22,6 +22,13 @@ $ docker-compose exec php bash
 #  cp .env.example .env
 # exit
 
+$ docker-compose run php bash
+# php artisan make:controller ExhibitionController
+
+# php artisan key:generate
+# php artisan make:migration create_item_table
+# php artisan 
+# php artisan make:model Exhibition
 
 ```
 

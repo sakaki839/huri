@@ -33,9 +33,15 @@
                 <img class="img1" src="" alt="">
             </aside>
             <main>
-               <h1>商品名がここに入る</h1>
-               <p>ブランド名</p>
-               <h3>￥47,000(税込)</h3>
+            <?php print_r($exhibition) ?>
+         <form class="form" action="../sell" method="post">
+            @csrf
+               <!-- <h1>商品名がここに入る</h1> -->
+                <h1><input type="text" name="product" value="{{ $exhibition['product'] }}" readonly /></h1>
+               <!-- <p>ブランド名</p> -->
+                <p><input type="text" name="brand" value="{{ $exhibition['brand'] }}" readonly /></p>
+               <!-- <h3>￥47,000(税込)</h3> -->
+                <h3><input type="float" name="price"  value="{{ $exhibition['price'] }}" readonly /></h3>
                <h3>
 
             <div class="like-container">
@@ -79,14 +85,15 @@
                </h3>
                
                <div>
-                 <button class="button1" type="button" onclick="location.href='/purchase/:item_id'">
+                 <button class="button1" type="button">
                 購入手続きへ
                </button>
                </div>
 
-              
+              </form>
 
-               <h2>商品説明</h2>
+               <!-- <h2>商品説明</h2> -->
+               <input type="text" name="explanation" value="{{$exhibition['explanation']}}"readonly/>
 
                <p>カラー：グレー</p>
                <p>新品</p>
@@ -112,9 +119,6 @@
                <div>
                  <button class="button2">コメントを送信する</button>
                </div>
-              
-
-
 
             </main>
         </div>

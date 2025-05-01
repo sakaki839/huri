@@ -31,7 +31,8 @@
                     
             </aside>
             <main>
-
+<form class="form" action="/item/:item_id" method="post">
+   @csrf
       <div class="h1">
             <h2>商品の出品</h2>
       </div>
@@ -84,7 +85,7 @@
           </div>
           <div class="ha">
             <div class="form__input--text">
-              <input type="text" name="name" placeholder="" />
+              <input type="text" name="product" placeholder="" />
             </div>
             <div class="form__error">
               <!--バリデーション機能を実装したら記述します。-->
@@ -97,7 +98,7 @@
           </div>
           <div class="ha">
             <div class="form__input--text">
-              <input type="email" name="email" placeholder="" />
+              <input type="text" name="brand" placeholder="" />
             </div>
             <div class="form__error">
               <!--バリデーション機能を実装したら記述します。-->
@@ -110,7 +111,7 @@
           </div>
           <div class="ha">
             <div class="form2__input--text">
-              <textarea id="message" name="message" rows="7" cols="70"></textarea>
+              <textarea id="message" type="text" name="explanation" rows="7" cols="70"></textarea>
             </div>
             <div class="form2__error">
               <!--バリデーション機能を実装したら記述します。-->
@@ -123,7 +124,7 @@
           </div>
           <div class="ha">
             <div class="form__input--text">
-              <input type="pas" name="pas" placeholder="￥" />
+              <input type="float" name="price" placeholder="￥" />
             </div>
             <div class="form__error">
               <!--バリデーション機能を実装したら記述します。-->
@@ -135,7 +136,7 @@
         </div>
         </h4>
       </div>
-      
+</form>
 
             </main>
             <aside>
